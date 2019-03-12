@@ -5,11 +5,6 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-#set WD    
-setwd("C:/IMARTICUS Learning/PROJECT_R")
-
-getwd()
-
 ##Loading the libraries
 library(caTools)
 library(ggplot2)
@@ -415,7 +410,7 @@ FullData$StockOptionLevel <- as.factor(FullData$StockOptionLevel)
 FullData$WorkLifeBalance <- as.factor(FullData$WorkLifeBalance)
 str(FullData)
 
-##############AFTER MERGING 2 DIFFERENT CODES, to be on safer side, we converted all the categorical variables as factor ########
+##############Type casting - categorical variables as factor ########
 
 train_attr$Education <- as.factor(train_attr$Education)
 train_attr$EnvironmentSatisfaction <- as.factor(train_attr$EnvironmentSatisfaction)
@@ -439,7 +434,7 @@ test_attr$StockOptionLevel <- as.factor(test_attr$StockOptionLevel)
 test_attr$WorkLifeBalance <- as.factor(test_attr$WorkLifeBalance)
 str(test_attr)
 
-####################### SYNCHING OF DATA FRAME AFTER MERGE of 2 CODES ############
+####################### Backing up data set's ############
 AT <- attr_data
 ATrain <- train_attr
 ATest <- test_attr
